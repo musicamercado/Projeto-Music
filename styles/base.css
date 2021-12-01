@@ -1,0 +1,105 @@
+@charset 'UTF-8';
+
+/* Configurações iniciais e declarações globais */
+@font-face {
+    font-family: Cafe;
+    src: url(/fonts/Louis\ George\ Cafe.ttf) format("truetype");
+}
+
+:root {
+    --font1: Cafe;
+    --color1: #000;
+    --color2: #000000da; /*nível transparência*/
+    --color3: #fff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    height: 100%;
+    font-family: var(--font1), Arial, Helvetica, sans-serif;
+    overflow: auto;
+}
+
+.all-content-page { /*Agrega todo o contéudo com exceção do footer*/
+    min-height:100%;
+    margin-bottom: -50px;
+}
+
+.centralizar { /* Classe geral para centralizar qualquer elemento*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Topo da página */
+.top {
+    padding: 1%;
+    background-color: var(--color1);
+    height: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.600);
+}
+
+.main-title-header {
+    display: inline-block;
+}
+
+#main-title {
+    padding: 10px;
+    color: var(--color3);
+    border: solid white;
+}
+
+.menu {
+    text-align: center;
+    display: inline;
+}
+
+.link-list {
+    display: inline-block;
+}
+
+.basic-link-configuration {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color3);
+    padding: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 0% 0% 0% 10%;
+}
+
+.link-decoration::before {
+    content: "\1F4C0\00a0";
+}
+
+@media screen and (max-width: 380px) { /* font-size do menu (dispositivos mobile) */
+    .link-list > a {
+        font-size: 0.8em;
+        margin-left: 5%;
+    }
+}
+
+/* Evita overflow do footer com o resto do conteúdo*/
+.push {
+    height: 50px;
+}
+
+/* Footer */
+.footer-page {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    overflow: auto;
+}
+
+.text-footer {
+    margin-top: 15px;
+    font-size: 1.05em;
+}
+
+.text-footer::before {
+    content: "\1F3B5\00a0";
+}

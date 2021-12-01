@@ -4,29 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/musical--v1.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Music-Pro</title>
+    
+    <title>Document</title>
 </head>
 <body>
-    <header id="top">
-        <div class="main-title-box">
-            <h1 id="main-title">Music Pro</h1>
-        </div>
+    <div class="all-content-page"> <!--Bloco que contém todo o conteúdo, exceção 'footer'-->
+        <!--Topo da página-->
+        <header class="top">
+            <div class="main-title-header">
+                <h1 id="main-title">Music Pro</h1>
+            </div>
+            <ul class="menu centralizar">
+                <li class="link-list"><a class="basic-link-configuration link-decoration link-responsive centralizar" href="#">amostras</a></li>
+            </ul>
+        </header>
 
-        <ul class="menu">
-            <a href="">Mecado Livre</a>
-        </ul>
-    </header>
+        <!--Bloco Principal-->
+        <main class="main-conteiner centralizar">
+            <div class="main-block centralizar">
+                <input class="centralizar input-1" type="email">
+                <button class="centralizar button-1">Confirmar email</button>
+            </div>
+            <div class="content-music-exemple centralizar">
+                <h2 class="centralizar heading-music">Smell Like Teen Spirit em formato MP3</h2>
+        
+                <div class="music-exemple-background centralizar">
+                    <audio src="/audio/Nirvana-Smells-Like-Teen-Spirit.mp3" controls>O seu navegador não suporta formato flac</audio>
+                </div>
+        
+                <h2 class="centralizar heading-music">Smell Like Teen Spirit em formato Flac (MQA)</h2>
+                <div class="music-exemple-background centralizar" id="music-player-2">
+                    <audio src="/audio/Smells-Like-Teen-Spirit.flac" controls>O seu navegador não suporta formato flac</audio>
+                </div>
 
-    <main>
-        <div class="main-block">
-            <input class="centralizar input-1" type="">
-            <button class="centralizar button-1">Confirmar email</button>
-        </div>
+            </div>
 
-        <div class="music-exemple-background centralizar">
-            <audio src="/audio/01 - Dubdogz, Bhaskar - Infinity (Dubdogz & Bhaskar Edit).flac" controls>O seu navegador não suporta formato flac</audio>
-        </div>
-    </main>
+            <div class="conteiner-image centralizar">
+                <picture>
+                    <source srcset="/images/vinyl-3-480-270.jpg" media="(max-width: 520px)">
+                    <source srcset="/images/vinyl-3-780-440.jpg" media="(max-width: 800px)">
+                    <img class="image-site" src="/images/vinyl-3-1280-720.jpg" alt="Imagem de vinyl">
+                </picture>
+            </div>
+
+            <div class="push"></div> <!--evita sobreposição do footer com o resto do conteúdo-->
+
+        </main>
+    </div>
+
+    <!--Rodapé-->
+    <footer class="footer-page">
+            <p class="centralizar text-footer">todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
