@@ -9,7 +9,7 @@
 :root {
     --font1: Cafe;
     --color1: #000;
-    --color2: #000000da; /*nível transparência*/
+    --color2: #808080;
     --color3: #fff;
 }
 
@@ -18,7 +18,7 @@
     padding: 0px;
 }
 
-body, html {
+body{
     height: 100%;
     font-family: var(--font1), Arial, Helvetica, sans-serif;
     overflow: auto;
@@ -29,7 +29,7 @@ body, html {
     margin-bottom: -50px;
 }
 
-.centralizar { /* Classe geral para centralizar qualquer elemento*/
+.centralizar { /* Classe geral para centralizar qualquer elemento (Acho que fiz besteira)*/
     margin: 0 auto;
     text-align: center;
 }
@@ -42,13 +42,14 @@ body, html {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.600);
 }
 
-.main-title-header {
+.main-title-container {
     display: inline-block;
 }
 
-#main-title {
+.main-title {
     padding: 10px;
     color: var(--color3);
+ 
     border: solid white;
 }
 
@@ -61,7 +62,7 @@ body, html {
     display: inline-block;
 }
 
-.basic-link-configuration {
+.basic-link-configuration-header {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color3);
@@ -69,10 +70,32 @@ body, html {
     font-size: 1.2em;
     text-decoration: none;
     margin: 0% 0% 0% 10%;
+    transition: all 0.3s;
 }
 
-.link-decoration::before {
+.basic-link-configuration-header:hover {
+    font-size: 1.1em;
+    text-decoration-color: green;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.link-decoration-header::before {
     content: "\1F4C0\00a0";
+}
+
+.basic-link-configuration {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.basic-link-configuration::after {
+    content: "🔗";
+}
+
+.basic-link-configuration:hover {
+    text-decoration: underline;
+    color: brown;
 }
 
 @media screen and (max-width: 380px) { /* font-size do menu (dispositivos mobile) */

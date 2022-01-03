@@ -1,54 +1,119 @@
-@charset 'UTF-8';
+ @charset 'UTF-8';
 
 /* Conteúdo Principal */
-.main-conteiner {
+.main-container {
     max-width: 1000px;
     margin-bottom: 50px;
 }
 
 .main-block {
-    margin-top: 5%;
+    color: rgba(0, 0, 0, 0.700);
+    margin-top: 4%;
     padding: 10px;
+    line-height: 25px;
     height: auto;
     width: 88%;
-    border-radius: 1%;
+    border-radius: 5px;
     overflow: auto;
-    border: 2px solid black;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.600);
+    transition: all 0.5s;
 }
 
-.input-1 {
-    font-family: var(--font1), Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    min-width: 80%;
-    margin-top: 20px;
-    height: 10%;
-    border: 2px solid black;
-    display: block;
+.main-block:hover {
+    color: black;
+    line-height: 25px;
+    border: 1px solid black;
+    transition: all 0.5s;
 }
 
-@media screen and (max-width: 480px){ /* Input mobile, font-size e tamanho*/
-    .input-1 {
-        padding: 1%;
-        font-size: 1.2em;
-        min-width: 96%;
+.main-paragraph {
+    text-align: justify;
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+
+#wrap-paragraph {
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+#qrcode-pix {
+    margin-top: 30px;
+    height: 180px;
+    width: 180px;
+    border: 1px solid;
+}
+
+.donate-paypal {
+    height: 145px;
+    padding: 2px 0;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    text-align: justify;
+    justify-content: space-around;
+}
+
+.paypal-form-container {
+    max-height: 100%;
+}
+
+.paypal-form {
+    margin: 40% 0 0 0;
+    border: 1px solid darkgray;
+    padding: 2px;
+}
+
+.paypal-form:hover {
+    background-color: lightgray;
+}
+
+.paragraph-donate {
+    line-height: 145px;
+    color: brown;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.qrcode-container {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.qrcode {
+    text-align: center;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 720px) {
+    #qrcode-pix {
+        margin: 15px 0px 0px 0px;
+    }
+
+    .donate-paypal {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .paypal-form {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .paragraph-donate {
+        font-size: 1em;
+        line-height: initial;
+        margin: 10px 0px 10px 0px;
+        word-wrap: break-word;
     }
 }
 
-.button-1 {
-    font-family: var(--font1);
-    font-weight: bold;
-    color: var(--color1);
-    padding: 10px;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    font-size: 1.2em;
-    border-radius: 10px;
-    display: block;
-}
-
-.button-1:hover {
-    border: 2px solid #be7676;
+.abreviations {
+    text-decoration: none;
+    font-style: italic;
 }
 
 .content-music-exemple { /*Conteiner que agrupa as músicas exemplos e conteúdo*/

@@ -8,50 +8,75 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/style.css">
     
-    <title>Document</title>
+    <title>Music Pro</title>
 </head>
-<body>
+<body onload="alert_msg()">
     <div class="all-content-page"> <!--Bloco que contém todo o conteúdo, exceção 'footer'-->
         <!--Topo da página-->
         <header class="top">
-            <div class="main-title-header">
-                <h1 id="main-title">Music Pro</h1>
+            <div class="main-title-container">
+                <h1 class="main-title">Music Pro</h1>
             </div>
             <ul class="menu centralizar">
-                <li class="link-list"><a class="basic-link-configuration link-decoration link-responsive centralizar" href="#">amostras</a></li>
+                <li class="link-list"><a class="basic-link-configuration-header link-decoration-header link-responsive centralizar" href="https://drive.google.com/drive/folders/19JxoK9v52LCBlfWseV6K-N6nJuGZS--k?usp=sharing" rel="external" target="_blank">Músicas</a></li>
             </ul>
         </header>
-
         <!--Bloco Principal-->
-        <main class="main-conteiner centralizar">
-            <div class="main-block centralizar">
-                <input class="centralizar input-1" type="email">
-                <button class="centralizar button-1">Confirmar email</button>
-            </div>
-            <div class="content-music-exemple centralizar">
-                <h2 class="centralizar heading-music">Smell Like Teen Spirit em formato MP3</h2>
-        
+        <main class="main-container centralizar">
+            <section class="main-block centralizar">
+                <section class="main-container-paragraph">
+                    <p class="main-paragraph">Músicas de altíssima qualidade em formato <strong><abbr class="abreviations" title="Free Lossless Audio Codec">flac</abbr></strong> com audio <strong><abbr class="abreviations" title="Áudio de alta resolução">lossless</abbr></strong> (Algumas com <strong>MQA - Master Master Quality Authenticated</strong>), você nunca mais vai querer sentir a música em outra qualidade, <a class="basic-link-configuration" href="https://drive.google.com/drive/folders/19JxoK9v52LCBlfWseV6K-N6nJuGZS--k?usp=sharing" rel="external" target="_blank">músicas no drive</a></p>
+                </section>
+                <!--Seção de doações-->
+                <section class="donate">
+                    <p class="main-paragraph">Músicas para <strong>uso pessoal</strong>, nosso repertório musical ainda é curto, mais com o tempo irá aumentar</p>
+                    <p class="main-paragraph">⚠️ Se você gostou, ajude com quanto puder em Criptomoeda, Pix ou Paypal ⚠️</p>
+                    <p id="wrap-paragraph" class="main-paragraph">Carteira cripto: <strong>0x43831943A574b9644f1EC8E9Ad9F27301AFb2213</strong></p>
+                    <figure>
+                        <img id="qrcode-pix" src="images/qrcode-pix.jpg" alt="">
+                        <figcaption>⚠️Ajuda Pix⚠️</figcaption>
+                    </figure>
+                    <hr style="margin-top: 10px;">
+                    <!--Seção de Doações Paypal-->
+                    <div class="donate-paypal">
+                    
+                        <a href="https://www.paypal.com/donate?token=PjsEHnCbG3V74tf0OaoY3O5iNZU-PSqG93hR3cMdaSl5pPOQW2gNd5RQKDmBgac2mF8Qy_CDNI_CT166" target="_blank">
+                            <div class="paypal-form-container">
+                                <form class="paypal-form" action="https://www.paypal.com/donate" method="post" target="_blank">
+                                    <input type="hidden" name="hosted_button_id" value="JGVALJDJJU56J" />
+                                    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                                </form>
+                            </div>
+                        </a>
+                        <p class="paragraph-donate">clique no botão ou leia o QR code Paypal</p>
+                        <div class="qrcode-container"><img class="qrcode" src="images/qr-code.png" alt="qr code"></div>
+                    
+                    </div>
+                </section>
+            </section>
+            <!--Seção de Exemplos Música-->
+            <section class="content-music-exemple centralizar">
+                <h2 class="centralizar heading-music">Smells Like Teen Spirit em formato MP3</h2>
                 <div class="music-exemple-background centralizar">
-                    <audio src="/audio/Nirvana-Smells-Like-Teen-Spirit.mp3" controls>O seu navegador não suporta formato flac</audio>
+                    <audio src="audio/Nirvana-Smells-Like-Teen-Spirit.mp3" controls preload="metadata">O seu navegador não suporta formato flac</audio>
                 </div>
         
-                <h2 class="centralizar heading-music">Smell Like Teen Spirit em formato Flac (MQA)</h2>
+                <h2 class="centralizar heading-music">Smells Like Teen Spirit em formato Flac (MQA)</h2>
                 <div class="music-exemple-background centralizar" id="music-player-2">
-                    <audio src="/audio/Smells-Like-Teen-Spirit.flac" controls>O seu navegador não suporta formato flac</audio>
+                    <audio src="audio/Smells-Like-Teen-Spirit.flac" controls preload="metadata">O seu navegador não suporta formato flac</audio>
                 </div>
 
-            </div>
+            </section>
 
             <div class="conteiner-image centralizar">
                 <picture>
-                    <source srcset="/images/vinyl-3-480-270.jpg" media="(max-width: 520px)">
+                    <source srcset="images/vinyl-3-480-270.jpg" media="(max-width: 520px)">
                     <source srcset="/images/vinyl-3-780-440.jpg" media="(max-width: 800px)">
-                    <img class="image-site" src="/images/vinyl-3-1280-720.jpg" alt="Imagem de vinyl">
+                    <img class="image-site" src="images/vinyl-3-1280-720.jpg" alt="Imagem de vinyl">
                 </picture>
             </div>
 
             <div class="push"></div> <!--evita sobreposição do footer com o resto do conteúdo-->
-
         </main>
     </div>
 
@@ -59,5 +84,6 @@
     <footer class="footer-page">
             <p class="centralizar text-footer">todos os direitos reservados</p>
     </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
