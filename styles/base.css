@@ -3,7 +3,7 @@
 /* Configurações iniciais e declarações globais */
 @font-face {
     font-family: Cafe;
-    src: url(/fonts/Louis\ George\ Cafe.ttf) format("truetype");
+    src: url(fonts/Louis\ George\ Cafe.ttf) format("truetype");
 }
 
 :root {
